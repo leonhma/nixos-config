@@ -7,7 +7,6 @@
     ];
     
   environment.systemPackages = with pkgs; [
-    wget
     nmap
     # figure out python and packages
   ];

@@ -12,6 +12,7 @@
       ../base.nix
       ../fragments/home-manager.nix
       ../fragments/users.nix
+      ../fragments/python.nix
       ../templates/server.nix
     ];
 
