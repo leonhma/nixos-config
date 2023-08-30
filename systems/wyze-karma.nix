@@ -40,7 +40,7 @@
     '';
     serviceConfig = {
       User = "leonhma";
-    }
+    };
     startAt = "hourly";
   }
 
