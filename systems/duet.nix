@@ -14,7 +14,7 @@
 
   # running inside lxc
   boot.isContainer = true;
-  mine.lxc.enable = true
+  mine.lxc.enable = true;
   
   # Enable touchpad support (enabled default in most desktopManager).
   services.xserver.libinput.enable = true;

@@ -17,6 +17,4 @@
     python311
     poetry
   ];
-
-  nixpkgs.config.allowUnfree = true;
 }
