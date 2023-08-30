@@ -42,6 +42,5 @@
       User = "leonhma";
     };
     startAt = "hourly";
-  }
-
+  };
 }
