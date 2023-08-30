@@ -33,15 +33,28 @@
 
   system.stateVersion = "23.05";
 
-  systemd.services."akyth-documents-download" = {
-    script = ''
-      source /etc/profile
-      cd /home/leonhma/akyth-documents-download
-      ./run.sh
-    '';
-    serviceConfig = {
-      User = "leonhma";
+  systemd.services = {
+    akyth-download = {
+      script = ''
+        source /etc/profile
+        cd /home/leonhma/akyth-documents-download
+        ./run.sh
+      '';
+      serviceConfig = {
+        User = "leonhma";
+      };
+      startAt = "hourly";
     };
-    startAt = "hourly";
+    akyth-clean = {
+      script = ''
+        source /etc/profile
+        cd /home/leonhma/akyth-documents-download
+        ./clean.sh
+      '';
+      serviceConfig = {
+        User = "leonhma";
+      };
+      startAt = "daily";
+    };
   };
 }
