@@ -35,6 +35,7 @@
 
   systemd.services."akyth-documents-download" = {
     script = ''
+      source /etc/profile
       cd /home/leonhma/akyth-documents-download
       ./run.sh
     '';
