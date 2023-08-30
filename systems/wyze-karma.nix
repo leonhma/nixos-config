@@ -33,4 +33,15 @@
 
   system.stateVersion = "23.05";
 
+  systemd.services."akyth-documents-download" = {
+    script = ''
+      cd /home/leonhma/akyth-documents-download
+      ./run.sh
+    '';
+    serviceConfig = {
+      User = "leonhma";
+    }
+    startAt = "hourly";
+  }
+
 }
